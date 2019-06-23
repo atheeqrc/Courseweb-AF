@@ -16,7 +16,7 @@ class InstructorMenu extends Component {
                     <Link className ="btn btn-secondary  mr-3 ml-3 mt-2 mb-2" to="/NotificationInstructor"> Notification </Link>
                     <Link className ="btn btn-secondary mr-3 ml-3 mt-2 mb-2" to="/CourseInstructor"> View Courses </Link>
                     <Link className ="btn btn-secondary mr-3 ml-3 mt-2 mb-2" to="/CreateAssignmentInstructor"> Create Assignment </Link>
-                    <Link className ="btn btn-secondary mr-3 ml-3 mt-2 mb-2" to="/MarkAssignmentInstructor"> Mark Assignments </Link>
+
                 </div>
             </div>
         );

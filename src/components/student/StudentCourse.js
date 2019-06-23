@@ -73,11 +73,11 @@ class StudentCourse extends Component {
 
     render() {
         return (
-            <div>
+            <div className="backgroundImageWithMargin">
 
                 <br/>
-                <h4 className="TextAlign font-weight-bold">Courses you have been Enrolled</h4>
-                <table className="table table-hover border center">
+                <h4 className="TextAlign font-weight-bold text-white">Courses you have been Enrolled</h4>
+                <table className=" tableDisplay  table table-hover border center">
                     <thead>
                     <th scope="col1">Course Name</th>
                     <th scope="col1">Credits</th>

@@ -154,10 +154,7 @@ class CommonHome extends Component {
                 }
                 } />
 
-                <Route exact path = "/MarkAssignmentInstructor" render = { () => {
-                    return <InstructorHome/>
-                }
-                } />
+
 
 
                 <Route exact path = "/specificAssignments/:courseName" render = { (props) => {

@@ -32,9 +32,9 @@ class AllNotifications extends Component {
 
     render() {
         return (
-            <div>
+            <div className="backgroundImageWithMargin" >
                 <br/>
-                <table className="table table-hover border center">
+                <table className=" tableDisplay table table-hover border center">
                     <thead>
                     <th scope="col1">NotificationId</th>
                     <th scope="col1">From</th>

@@ -35,6 +35,42 @@ class Assignment extends Component {
 
     }
 
+
+    onUpdate = (e) =>{
+        e.preventDefault()
+        let name = e.target.name.replace(/\s/g, '');
+        console.log(name)
+
+
+        if(this.refs[name].value =='') {
+            alert("You cant keep the  date field blank")
+
+        }else {
+            if((moment(this.refs[name].value).diff(moment(),"days") +1) < 2){
+                alert("Please enter a future date")
+            }
+            else{
+
+                fetch('http://localhost:5000/api/assignment/'+ e.target.name + "/" +this.refs[name].value,{
+                    method:"PUT",
+                    headers:{"Content-Type" : "application/json"}
+                }).then(res=>{
+                    return res.json();
+                }).then( data => {
+
+                    console.log(data)
+
+                    alert("Successfully updated the date for assignment "+ name)
+                }).catch(err=>{
+                    console.log(`Error : ${err}`);
+                })
+            }
+
+        }
+
+    }
+
+
     render() {
         return (
             <div className="backgroundImageWithMargin">
@@ -50,6 +86,9 @@ class Assignment extends Component {
                     <th scope="col1">Due Date</th>
                     <th scope="col1">Days Remaining</th>
                     <th scope="col1">View Submissions</th>
+                    <th scope="col1">Select Date</th>
+                    <th scope="col1">Update</th>
+
 
 
                     </thead>
@@ -67,6 +106,20 @@ class Assignment extends Component {
                                     View Submissions
 
                                 </Link></td>
+
+                                <td>
+                                    <input type="date"  className="form-control" name={assignment.name}
+                                           placeholder="Enrollment Key"
+                                        // onChange={this.handleUserInput}
+
+                                           ref={assignment.name.replace(/\s/g, '')}
+                                    />
+
+
+                                </td>
+
+
+                                <td><button className="btn btn-secondary" name={assignment.name}  onClick={this.onUpdate}> Update </button> </td>
 
 
                             </tr>
