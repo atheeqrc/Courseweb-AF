@@ -37,3 +37,21 @@
 .tableDisplay{
     background-color: white;
 }
+
+.backgroundImageWithMarginInstructor {
+    background-image: url("../images/instructor.jpg");
+    height: 1000px;
+    margin-left: 1%;
+    margin-top: 0%;
+    margin-right: 1%;
+    margin-bottom: 2%;
+}
+
+.backgroundImageWithMarginStudent {
+    background-image: url("../images/student.jpg");
+    height: 1000px;
+    margin-left: 1%;
+    margin-top: 0%;
+    margin-right: 1%;
+    margin-bottom: 2%;
+}

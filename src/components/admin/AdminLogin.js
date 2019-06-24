@@ -111,6 +111,7 @@ class AdminLogin extends Component {
 
 
 
+
                 ReactDOM.render(<CommonHome/>,document.getElementById('root'))
 
             }else {

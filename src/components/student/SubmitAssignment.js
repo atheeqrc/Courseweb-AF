@@ -121,7 +121,7 @@ class SubmitAssignment extends Component {
 
 
     }
-
+//onchange for files
     getFile =(e) => {
         e.preventDefault();
         console.log(e.target.name)
@@ -179,7 +179,7 @@ class SubmitAssignment extends Component {
                     'Content-Type': 'multipart/form-data'
                 }
             };
-            delete options.headers['Content-Type'];
+            delete options.headers['Content-Type']; // recreate the content header according to the file
 
             fetch("http://localhost:5000/api/submission/file",options
             ).then( res => {

@@ -210,7 +210,7 @@ class StudentProfile extends Component {
                         <td></td>
                         <td><div className="form-group align-content-center">
 
-                            <input onClick={this.updateVisible} className="btn btn-success  TextAlign ml-5 align-content-center" value="Update Profile" />
+                            <input onClick={this.updateVisible} type="submit" className="btn btn-success  TextAlign ml-5 align-content-center" value="Update Profile" />
                         </div></td>
                     </tr>
 

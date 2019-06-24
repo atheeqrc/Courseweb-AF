@@ -51,6 +51,7 @@ class CommonHome extends Component {
     directToLogin = (e) =>{
         e.preventDefault()
         if(this.state.isAdmin){
+
             localStorage.clear()
             localStorage.setItem("userType", "admin")
             window.location.replace("/")

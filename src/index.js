@@ -10,7 +10,7 @@ import InstructorLogin from "./components/instructor/InstructorLogin";
 import StudentLogin from "./components/student/StudentLogin";
 
 
-ReactDOM.render(<Courseweb />, document.getElementById('root'));
+// ReactDOM.render(<Courseweb />, document.getElementById('root'));
 
 if(localStorage.getItem('userType') == 'admin'){
     ReactDOM.render(<AdminLogin />, document.getElementById('root'));
